@@ -1,11 +1,17 @@
 package examenfinalparte2;
 
+import javax.swing.JOptionPane;
+
 public class Principal {
 
     public static boolean p = false;
  
+    /** Main donde se ejecuta el programa
+     * en el que se introduce un numero
+     * @param arg 
+     */
     public static void main(String arg[]) {
-        int digitos = 2;
+        int digitos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
         int numeroDigitos = 0;
         if (digitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
@@ -25,6 +31,12 @@ public class Principal {
         }
     }
 
+    /** Metodo que comprueba el programa
+     * funciona como filtro
+     * @param numeroDigitos
+     * @param digitos
+     * @param i 
+     */
     public static void Comprobar(int numeroDigitos, int digitos, int i) {
         if (numeroDigitos == digitos) {
             if (i < 4) {
